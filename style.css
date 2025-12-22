@@ -72,6 +72,42 @@ img {
   text-align: center;
 }
 
+.button {
+  padding: 0.9rem 2rem; /* base */ 
+  border-radius: 24px; 
+  border: none; 
+  font-family: var(--family); 
+  font-weight: var(--font-weight-bold); 
+  font-size: 1rem; cursor: pointer; 
+  color: var(--white); 
+  transition: background-color 0.2s ease, transform 0.2s ease; 
+  display: inline-block;
+}
+
+.btn:hover { 
+  transform: translateY(-2px); 
+}
+
+/* --- BOTTONI SPECIFICI --- */ 
+/* 1️⃣ Download — più largo e turchese */ 
+.download { background-color: var(--turquoise-400); 
+  padding: 1rem 2.6rem; /* leggermente più lungo */ 
+} 
+
+.download:hover { 
+  background-color: hsl(183, 57%, 30%); /* più scuro */ 
+} 
+
+/* 2️⃣ What is it — viola e leggermente più corto */ 
+.what-is-it { 
+  background-color: var(--purple-500); 
+  padding: 0.9rem 2rem; /* più corto */ 
+} 
+
+.btn-secondary:hover { 
+  background-color: hsl(263, 55%, 45%); /* più scuro */ 
+}
+
 .number-01 {
   width: 50px;
   height: 50px;
@@ -120,6 +156,31 @@ img {
   max-width: 1440px; /* desktop */ 
   min-width: 375px; /* mobile */ 
   padding: 1rem;
+}
+
+.number-02 {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: var(--grey-400);
+  border: 2px solid var(--grey-400);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: var(--font-weight-semibold);
+  position: relative;
+}
+
+/* Linea verticale sopra */
+.number-02::before {
+  content: "";
+  width: 2px;
+  height: 60px;
+  background: var(--grey-400);
+  position: absolute;
+  top: -60px; /* distanza dal cerchio */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 
