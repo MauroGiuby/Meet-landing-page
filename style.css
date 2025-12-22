@@ -11,6 +11,8 @@
   --font-size: 15px;
   /* ---Fonts--- */
   --family: 'Barlow Semi Condensed', sans-serif;
+  --font-weight-light: 300;
+  --font-weight-regular: 400; 
   --font-weight-semibold: 500;
   --font-weight-bold: 600;
 }
@@ -72,6 +74,10 @@ img {
   text-align: center;
 }
 
+p { 
+  font-weight: var(--font-weight-regular); 
+}
+
 .button {
   padding: 0.9rem 2rem; /* base */ 
   border-radius: 24px; 
@@ -104,7 +110,7 @@ img {
   padding: 0.9rem 2rem; /* più corto */ 
 } 
 
-.btn-secondary:hover { 
+.what-is-it:hover { 
   background-color: hsl(263, 55%, 45%); /* più scuro */ 
 }
 
@@ -183,4 +189,13 @@ img {
   transform: translateX(-50%);
 }
 
+/* --- BOTTONI SPECIFICI --- */ 
+/* 1️⃣ Download — più largo e viola */ 
+.download2 { background-color: var(--purple-500); 
+  padding: 1rem 2.6rem; /* leggermente più lungo */ 
+} 
+
+.download2:hover { 
+  background-color: hsl(263, 55%, 45%); /* più scuro */ 
+} 
 
