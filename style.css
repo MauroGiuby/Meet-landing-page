@@ -28,16 +28,19 @@
 body {
   background-color: var(--white);
   font-family: var(--family);
-  min-height: 100vh; 
-  display: grid;  
-  justify-content: center; /* orizzontale */ 
-  align-items: center; /* verticale */
+  
+  /* min-height: 100vh; */ 
+  /* display: grid; */  
+  /* justify-content: center; /* orizzontale */ 
+  /* align-items: center; /* verticale */
 }
 
 .Logo-meet {
   display: grid; 
-  align-items: center;
-  justify-items: center;
+  /* align-items: center; */
+  /* justify-items: center; */
+  place-items: center; 
+  margin: 2rem auto;
 }
 
 .header-grid {
@@ -47,6 +50,7 @@ body {
 }
 
 img {
+  border-radius: 8px;
   max-width: 250px;
   width: 100%; /* così si adattano alla griglia */ 
   display: block;
@@ -66,31 +70,6 @@ img {
 
 .text-header-grid button {
   text-align: center;
-}
-
-.main-grid {
-  display: grid;
-  gap: 1rem;
-  margin: 0 auto; /* Limiti richiesti */ 
-}
-
-img {
-  border-radius: 8px;
-  max-width: 250px;
-  width: 100%; /* così si adattano alla griglia */ 
-  display: block;
-}
-
-.image-main-grid {
-  display: grid; 
-  align-items: center;
-  justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-  gap: 1.5rem; /* Centra la griglia */ 
-  margin: 0 auto; /* Limiti richiesti */ 
-  max-width: 1440px; /* desktop */ 
-  min-width: 375px; /* mobile */ 
-  padding: 1rem;
 }
 
 .number-01 {
@@ -117,3 +96,30 @@ img {
   left: 50%;
   transform: translateX(-50%);
 }
+
+.main-grid {
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto; /* Limiti richiesti */ 
+}
+
+img {
+  
+  max-width: 250px;
+  width: 100%; /* così si adattano alla griglia */ 
+  display: block;
+}
+
+.image-main-grid {
+  display: grid; 
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 1.5rem; /* Centra la griglia */ 
+  margin: 0 auto; /* Limiti richiesti */ 
+  max-width: 1440px; /* desktop */ 
+  min-width: 375px; /* mobile */ 
+  padding: 1rem;
+}
+
+
