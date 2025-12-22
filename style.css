@@ -28,31 +28,37 @@
 body {
   background-color: var(--white);
   font-family: var(--family);
+  min-height: 100vh; 
+  display: flex; 
+  justify-content: center; /* orizzontale */ 
+  align-items: center; /* verticale */
 }
 
 .header-grid {
   display: grid;
   gap: 2rem;
   max-width: 450px;
+  margin: 0 auto; /* Limiti richiesti */ 
 }
 
 .main-grid {
   display: grid;
   gap: 1rem;
   max-width: 450px;
+  margin: 0 auto; /* Limiti richiesti */ 
 }
 
 img {
   border-radius: 8px;
   max-width: 250px;
   width: 100%; /* così si adattano alla griglia */ 
-  display: block;width: 100%; /* così si adattano alla griglia */ 
   display: block;
 }
 
 .image-main-grid {
   display: grid; 
   align-items: center;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 1.5rem; /* Centra la griglia */ 
   margin: 0 auto; /* Limiti richiesti */ 
