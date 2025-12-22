@@ -45,6 +45,20 @@ body {
 img {
   border-radius: 8px;
   max-width: 250px;
+  width: 100%; /* così si adattano alla griglia */ 
+  display: block;width: 100%; /* così si adattano alla griglia */ 
+  display: block;
+}
+
+.image-main-grid {
+  display: grid; 
+  align-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 1.5rem; /* Centra la griglia */ 
+  margin: 0 auto; /* Limiti richiesti */ 
+  max-width: 1440px; /* desktop */ 
+  min-width: 375px; /* mobile */ 
+  padding: 1rem;
 }
 
 .number-01 {
