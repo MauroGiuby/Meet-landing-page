@@ -35,16 +35,20 @@ body {
 }
 
 .header-grid {
+  /*
   display: grid;
   gap: 2rem;
   max-width: 450px;
+  */
   margin: 0 auto; /* Limiti richiesti */ 
 }
 
 .main-grid {
+  /*
   display: grid;
   gap: 1rem;
   max-width: 450px;
+  */
   margin: 0 auto; /* Limiti richiesti */ 
 }
 
