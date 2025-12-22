@@ -64,6 +64,10 @@ img {
   padding: 1rem;
 }
 
+.text-header-grid button {
+  text-align: center;
+}
+
 .main-grid {
   display: grid;
   gap: 1rem;
