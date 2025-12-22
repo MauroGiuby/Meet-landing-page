@@ -29,26 +29,44 @@ body {
   background-color: var(--white);
   font-family: var(--family);
   min-height: 100vh; 
-  display: flex; 
+  display: grid;  
   justify-content: center; /* orizzontale */ 
   align-items: center; /* verticale */
 }
 
+.Logo-meet {
+  display: grid; 
+  align-items: center;
+  justify-items: center;
+}
+
 .header-grid {
-  /*
   display: grid;
   gap: 2rem;
-  max-width: 450px;
-  */
   margin: 0 auto; /* Limiti richiesti */ 
 }
 
+img {
+  max-width: 250px;
+  width: 100%; /* così si adattano alla griglia */ 
+  display: block;
+}
+
+.image-header-grid {
+  display: grid; 
+  align-items: center;
+  justify-items: center;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  gap: 1.5rem; /* Centra la griglia */ 
+  margin: 0 auto; /* Limiti richiesti */ 
+  max-width: 1440px; /* desktop */ 
+  min-width: 375px; /* mobile */ 
+  padding: 1rem;
+}
+
 .main-grid {
-  /*
   display: grid;
   gap: 1rem;
-  max-width: 450px;
-  */
   margin: 0 auto; /* Limiti richiesti */ 
 }
 
