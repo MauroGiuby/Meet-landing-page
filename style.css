@@ -125,6 +125,8 @@ p {
   align-items: center;
   font-weight: var(--font-weight-semibold);
   position: relative;
+
+  margin: 8rem auto; /* centra il cerchio nella pagina e aggiunge spazio sopra/sotto */
 }
 
 /* Linea verticale sopra */
@@ -175,6 +177,8 @@ img {
   align-items: center;
   font-weight: var(--font-weight-semibold);
   position: relative;
+
+  margin: 8rem auto; /* centra il cerchio nella pagina e aggiunge spazio sopra/sotto */
 }
 
 /* Linea verticale sopra */
