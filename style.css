@@ -192,6 +192,22 @@ p {
   justify-content: center;
   padding: 2rem;
   color: var(--white);
+  overflow: hidden; /* necessario per l'overlay */
+}
+
+/* Overlay colorato */ 
+.footer::before { 
+  content: ""; 
+  position: absolute; 
+  inset: 0; 
+  background-color: var(--cyan-600); 
+  opacity: 0.75; /* regola la trasparenza */ 
+  z-index: 0; 
+}
+
+/* Il contenuto deve stare sopra l’overlay */ 
+.footer-content { 
+  position: relative; z-index: 1; 
 }
 
 /* --- CERCHIO “02” --- */
@@ -244,7 +260,7 @@ p {
 }
 
 /* --- BOTTONI --- */
-.btn {
+.button {
   padding: 1rem 2.6rem;
   border-radius: 8px;
   border: none;
