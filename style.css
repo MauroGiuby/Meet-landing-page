@@ -256,7 +256,7 @@ p {
 }
 
 /* Colonna destra */
-.footer-content .btn-download {
+.footer-content .download2 {
   justify-self: end;
 }
 
@@ -273,12 +273,13 @@ p {
 @media (max-width: 900px) {
   .footer-content {
     grid-template-columns: 1fr;
-    text-align: center;
+    text-align: left;
   }
 
   .footer-content h4,
   .footer-content p {
     margin: 0 auto;
+    text-align: left;
   }
 
   .footer-content .btn-download {
