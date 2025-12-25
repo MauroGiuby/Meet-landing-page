@@ -143,7 +143,7 @@ p {
   align-items: center;
   font-weight: var(--font-weight-semibold);
   position: relative;
-  margin: 8rem auto; /* centra il cerchio nella pagina e aggiunge spazio sopra/sotto */
+  margin: 10rem auto 4rem; /* centra il cerchio nella pagina e aggiunge spazio sopra/sotto */
 }
 
 /* Linea verticale sopra */
@@ -250,6 +250,7 @@ p {
   align-items: center;
   font-weight: var(--font-weight-semibold);
   background-color: transparent;
+  margin: 1rem auto; /* centra il cerchio nella pagina e aggiunge spazio sopra/sotto */
 }
 
 /* --- CONTENUTO A 3 COLONNE --- */
