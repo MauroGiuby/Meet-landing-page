@@ -92,6 +92,13 @@ img {
   font-weight: var(--font-weight-regular); 
 }
 
+.text-header-grid .buttons {
+  display: flex; 
+  justify-content: center; 
+  gap: 1rem; /* respiro tra i due bottoni */ 
+  margin-top: 1rem;
+}
+
 /* --- BOTTONI GENERICI --- */
 
 .button {
