@@ -85,18 +85,20 @@ img {
 .text-header-grid h1 {
   font-size: 40px;
   font-weight: var(--font-weight-bold);
+  margin: 0.2rem auto;
 }
 
 .text-header-grid p { 
   color: var(--slate-600);
   font-weight: var(--font-weight-regular); 
+  margin: auto;
 }
 
 .text-header-grid .buttons {
   display: flex; 
   justify-content: center; 
   gap: 1rem; /* respiro tra i due bottoni */ 
-  margin-top: 1rem;
+  margin: 1rem auto;
 }
 
 /* --- BOTTONI GENERICI --- */
