@@ -178,14 +178,15 @@ p {
 
 .main-grid h2 {
   text-align: center;
-  margin-top: 0.5rem; /* riduce spazio sopra */ 
-  margin-bottom: 0.5rem;
+  max-width: 400px;
+  margin: 0.5rem auto;
 }
 
 .main-grid p {
   text-align: center;
-  margin-top: 0.5rem; /* riduce spazio sopra */
-  margin-bottom: 15rem;
+  max-width: 400px;
+  color: var(--slate-600);
+  margin: 0.5rem auto 15rem; /* centra il testo + spazio sotto al footer */
 }
 
 /* --- FOOTER WRAPPER --- */
