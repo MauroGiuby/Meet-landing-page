@@ -50,6 +50,11 @@ body {
   margin: 2rem auto;
 }
 
+.Logo-meet img {
+  width: 108px;
+  height: auto;
+}
+
 /* --- HEADER-GRID --- */
 
 .header-grid {
