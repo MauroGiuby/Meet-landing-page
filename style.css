@@ -218,7 +218,7 @@ img {
   justify-content: center;
   padding: 2rem;
   color: var(--white);
-  overflow: hidden; /* necessario per l'overlay */
+  overflow: visible; /* necessario per l'overlay */
 }
 
 /* Overlay colorato */ 
@@ -251,18 +251,29 @@ img {
   top: -25px; /* taglia a metà il cerchio */
   left: 50%;
   transform: translateX(-50%, -50%);
+  z-index: 10;
   width: 50px;
+  color: var(--slate-600);
   height: 50px;
   border-radius: 50%;
   border: 2px solid var(--slate-300);
-  color: var(--slate-600);
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: var(--font-weight-semibold);
   background-color: var(--white);
-  /* margin: 1rem auto; */
-  /* centra il cerchio nella pagina e aggiunge spazio sopra/sotto */
+}
+
+/* Linea verticale sopra */
+.number-02::before {
+  content: "";
+  width: 2px;
+  height: 60px;
+  background: var(--slate-300);
+  position: absolute;
+  top: -60px; /* distanza dal cerchio */
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 /* Colonna sinistra */
