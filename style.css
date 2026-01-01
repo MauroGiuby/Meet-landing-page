@@ -75,8 +75,7 @@ body {
   /* padding: 1rem; */
 }
 
-img {
-  border-radius: 8px;
+.image-header-grid img {
   max-width: 250px;
   width: 100%; /* così si adattano alla griglia */ 
   display: block;
@@ -190,8 +189,15 @@ img {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
   gap: 1.5rem; /* Centra la griglia */ 
   margin: 0.1rem auto 0.5rem; /* Limiti richiesti */ 
-  max-width: 1440px; /* desktop */ 
+  max-width: 1280px; /* desktop */ 
   padding: 1rem;
+}
+
+.image-main-grid img {
+  border-radius: 8px;
+  max-width: 200px;
+  width: 100%; /* così si adattano alla griglia */ 
+  display: block;
 }
 
 .main-grid h3 {
