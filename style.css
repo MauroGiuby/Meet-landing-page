@@ -186,7 +186,7 @@ body {
   display: grid; 
   align-items: center;
   justify-items: center;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+  grid-template-columns: repeat(4, 1fr); 
   gap: 1.5rem; /* Centra la griglia */ 
   margin: 0.1rem auto 0.5rem; /* Limiti richiesti */ 
   max-width: 1280px; /* desktop */ 
