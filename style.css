@@ -357,11 +357,12 @@ body {
       "text text";
   }
 
-  .text-header-grid {
+  .text-header-grid .buttons {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    text-align: center;
+    width: 100%;
+    align-items: center;
   }
 }
 
