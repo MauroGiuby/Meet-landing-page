@@ -66,23 +66,6 @@ body {
   margin: 0 auto; /* Limiti richiesti */ 
 }
 
-.image-header-grid {
-  display: grid; 
-  align-items: center;
-  justify-items: center;
-  /* grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); */
-  gap: 1.5rem; /* Centra la griglia */ 
-  margin: 0.25rem auto 1rem; /* Limiti richiesti */ 
-  /* max-width: 1440px; */ 
-  /* padding: 1rem; */
-}
-
-.image-header-grid img {
-  max-width: 250px;
-  width: 100%; /* così si adattano alla griglia */ 
-  display: block;
-}
-
 .text-header-grid {
   text-align: center;
   display: grid;
@@ -336,16 +319,18 @@ body {
 }
 
 /* --- RESPONSIVE --- */
+
+/* --- TABLET --- */
 @media (max-width: 900px) {
   .header-grid {
-    grid-template-columns: 1fr 1fr; /* due colonne */
+    grid-template-columns: 1fr 1fr;
     grid-template-areas:
       "img-left img-right"
       "text text";
   }
 
-  .img-left { grid-area: img-left; } 
-  .img-right { grid-area: img-right; } 
+  .img-left { grid-area: img-left; }
+  .img-right { grid-area: img-right; }
   .text-header-grid { grid-area: text; }
 
   .footer-content {
@@ -363,6 +348,7 @@ body {
   }
 
   .image-main-grid {
-    grid-template-columns: repeat(2, 1fr); /* 2 immagini per riga */
+    grid-template-columns: repeat(2, 1fr);
   }
 }
+
