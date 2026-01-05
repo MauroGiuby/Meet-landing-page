@@ -74,12 +74,13 @@ body {
 }
 
 .text-header-grid h1 {
-  font-size: 45px;
+  font-size: 55px;
   font-weight: var(--font-weight-bold);
   margin: 0.3rem auto 0.3rem;
 }
 
 .text-header-grid p { 
+  font-size: 20px;
   color: var(--slate-600);
   font-weight: var(--font-weight-regular); 
   margin: 0 auto 0.3rem;
@@ -180,7 +181,7 @@ body {
 
 .image-main-grid img {
   border-radius: 8px;
-  max-width: 200px;
+  max-width: 240px;
   width: 100%; /* così si adattano alla griglia */ 
   display: block;
 }
