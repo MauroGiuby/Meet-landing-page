@@ -186,6 +186,27 @@ body {
   display: block;
 }
 
+/* Contenitori delle immagini laterali */
+.img-left,
+.img-right {
+  overflow: hidden;     /* taglia la parte che esce */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Immagine sinistra: spostata leggermente a sinistra */
+.img-left img {
+  width: 100%;          /* ingrandisce leggermente per permettere il crop */
+  transform: translateX(-5%); /* taglio sul lato sinistro */
+}
+
+/* Immagine destra: spostata leggermente a destra */
+.img-right img {
+  width: 100%;
+  transform: translateX(5%);  /* taglio sul lato destro */
+}
+
 .main-grid h3 {
   color: var(--cyan-600);
   text-align: center;
