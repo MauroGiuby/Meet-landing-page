@@ -76,14 +76,17 @@ body {
 .text-header-grid h1 {
   font-size: 55px;
   font-weight: var(--font-weight-bold);
-  margin: 1.2rem auto 1.2rem;
+  margin: 0.9rem auto 0.9rem;
 }
 
 .text-header-grid p { 
   font-size: 18px;
   color: var(--slate-600);
   font-weight: var(--font-weight-regular); 
-  margin: 0 auto 0.3rem;
+  margin: 0.3rem auto;
+  max-width: 420px;
+  display: inline-block;
+  line-height: 1.4;
 }
 
 .text-header-grid .buttons {
@@ -367,6 +370,10 @@ body {
     flex-direction: column;
     width: 100%;
     align-items: center;
+  }
+
+  .text-header-grid p { 
+    max-width: 300px; /* forza due line-break */ 
   }
 
   .image-main-grid {
