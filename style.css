@@ -80,7 +80,7 @@ body {
 }
 
 .text-header-grid p { 
-  font-size: 20px;
+  font-size: 18px;
   color: var(--slate-600);
   font-weight: var(--font-weight-regular); 
   margin: 0 auto 0.3rem;
@@ -130,6 +130,27 @@ body {
 
 .what-is-it:hover { 
   background-color: var(--purple-300);  /* più scuro */ 
+}
+
+/* Contenitori delle immagini laterali */
+.img-left,
+.img-right {
+  overflow: hidden;     /* taglia la parte che esce */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Immagine sinistra: spostata leggermente a sinistra */
+.img-left img {
+  width: 100%;          /* ingrandisce leggermente per permettere il crop */
+  transform: translateX(-5%); /* taglio sul lato sinistro */
+}
+
+/* Immagine destra: spostata leggermente a destra */
+.img-right img {
+  width: 100%;
+  transform: translateX(5%);  /* taglio sul lato destro */
 }
 
 /* --- MAIN GRID --- */
@@ -184,27 +205,6 @@ body {
   max-width: 240px;
   width: 100%; /* così si adattano alla griglia */ 
   display: block;
-}
-
-/* Contenitori delle immagini laterali */
-.img-left,
-.img-right {
-  overflow: hidden;     /* taglia la parte che esce */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* Immagine sinistra: spostata leggermente a sinistra */
-.img-left img {
-  width: 100%;          /* ingrandisce leggermente per permettere il crop */
-  transform: translateX(-5%); /* taglio sul lato sinistro */
-}
-
-/* Immagine destra: spostata leggermente a destra */
-.img-right img {
-  width: 100%;
-  transform: translateX(5%);  /* taglio sul lato destro */
 }
 
 .main-grid h3 {
