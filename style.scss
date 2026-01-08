@@ -11,7 +11,7 @@
   --purple-300: hsl(268, 100%, 86%);
   --purple-600: hsl(268, 34%, 53%);
   --font-size: 15px;
-  --family: "Barlow Semi Condensed", sans-serif;
+  --family: 'Barlow Semi Condensed', sans-serif;
   --font-weight-light: 300;
   --font-weight-regular: 400;
   --font-weight-semibold: 500;
@@ -21,6 +21,21 @@
 /* -----------------------------------
    BREAKPOINTS
 ----------------------------------- */
+$mobile: 600px;
+$tablet: 900px;
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
 /* -----------------------------------
    GLOBAL
 ----------------------------------- */
@@ -45,10 +60,11 @@ body {
   min-height: 108px;
   place-items: center;
   margin: 1rem auto 0.25rem;
-}
-.Logo-meet img {
-  width: 108px;
-  height: auto;
+
+  img {
+    width: 108px;
+    height: auto;
+  }
 }
 
 /* -----------------------------------
@@ -61,11 +77,12 @@ body {
   max-width: 1440px;
   gap: 2rem;
   margin: 0 auto;
-}
-@media (max-width: 900px) {
-  .header-grid {
+
+  @include tablet {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "img-left img-right" "text text";
+    grid-template-areas:
+      "img-left img-right"
+      "text text";
     gap: 0;
     justify-items: stretch;
   }
@@ -76,36 +93,37 @@ body {
   display: grid;
   justify-items: center;
   gap: 1rem;
-}
-.text-header-grid h1 {
-  font-size: 55px;
-  font-weight: var(--font-weight-bold);
-  margin: 0.9rem auto;
-}
-.text-header-grid p {
-  font-size: 18px;
-  color: var(--slate-600);
-  margin: 0.3rem auto;
-  max-width: 420px;
-  display: inline-block;
-  line-height: 1.4;
-}
-@media (max-width: 600px) {
-  .text-header-grid p {
-    max-width: 300px;
+
+  h1 {
+    font-size: 55px;
+    font-weight: var(--font-weight-bold);
+    margin: 0.9rem auto;
   }
-}
-.text-header-grid .buttons {
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin: 1rem auto;
-}
-@media (max-width: 600px) {
-  .text-header-grid .buttons {
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
+
+  p {
+    font-size: 18px;
+    color: var(--slate-600);
+    margin: 0.3rem auto;
+    max-width: 420px;
+    display: inline-block;
+    line-height: 1.4;
+
+    @include mobile {
+      max-width: 300px;
+    }
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem auto;
+
+    @include mobile {
+      flex-direction: column;
+      width: 100%;
+      align-items: center;
+    }
   }
 }
 
@@ -118,11 +136,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-}
-.img-left img,
-.img-right img {
-  width: 130%;
-  height: auto;
+
+  img {
+    width: 130%;
+    height: auto;
+  }
 }
 
 .img-left img {
@@ -133,32 +151,35 @@ body {
   transform: translateX(7%);
 }
 
-@media (max-width: 900px) {
+@include tablet {
   .header-grid {
     grid-template-columns: 1fr 1fr;
-    grid-template-areas: "img-left img-right" "text text";
+    grid-template-areas:
+      "img-left img-right"
+      "text text";
     gap: 0;
   }
-  .header-grid .img-left {
-    grid-area: img-left;
+
+  .header-grid {
+    .img-left { grid-area: img-left; }
+    .img-right { grid-area: img-right; }
+    .text-header-grid { grid-area: text; }
   }
-  .header-grid .img-right {
-    grid-area: img-right;
-  }
-  .header-grid .text-header-grid {
-    grid-area: text;
-  }
+
   .img-left img,
   .img-right img {
     width: 120%;
   }
 }
-@media (max-width: 600px) {
+
+
+@include mobile {
   .img-left img,
   .img-right img {
     width: 100%;
   }
 }
+
 /* -----------------------------------
    BUTTONS
 ----------------------------------- */
@@ -173,32 +194,36 @@ body {
   color: var(--white);
   transition: background-color 0.2s ease, transform 0.2s ease;
   display: inline-block;
-}
-.button:hover {
-  transform: translateY(-2px);
+
+  &:hover {
+    transform: translateY(-2px);
+  }
 }
 
 .download {
   background-color: var(--cyan-600);
   padding: 1rem 2.6rem;
-}
-.download:hover {
-  background-color: var(--cyan-300);
+
+  &:hover {
+    background-color: var(--cyan-300);
+  }
 }
 
 .what-is-it {
   background-color: var(--purple-600);
-}
-.what-is-it:hover {
-  background-color: var(--purple-300);
+
+  &:hover {
+    background-color: var(--purple-300);
+  }
 }
 
 .download2 {
   background-color: var(--purple-600);
   padding: 1rem 2.6rem;
-}
-.download2:hover {
-  background-color: var(--purple-300);
+
+  &:hover {
+    background-color: var(--purple-300);
+  }
 }
 
 /* -----------------------------------
@@ -210,27 +235,30 @@ body {
   min-height: 883px;
   gap: 1rem;
   margin: 0 auto;
-}
-.main-grid h3 {
-  color: var(--cyan-600);
-  text-align: center;
-  margin: 0.1rem auto;
-  line-height: 1.4;
-  word-spacing: 0.3rem;
-}
-.main-grid h2 {
-  text-align: center;
-  font-weight: var(--font-weight-bold);
-  max-width: 400px;
-  margin: 0.1rem auto;
-  line-height: 1.4;
-}
-.main-grid p {
-  text-align: center;
-  max-width: 400px;
-  color: var(--slate-600);
-  margin: 0.1rem auto 10rem;
-  line-height: 1.7;
+
+  h3 {
+    color: var(--cyan-600);
+    text-align: center;
+    margin: 0.1rem auto;
+    line-height: 1.4;
+    word-spacing: 0.3rem;
+  }
+
+  h2 {
+    text-align: center;
+    font-weight: var(--font-weight-bold);
+    max-width: 400px;
+    margin: 0.1rem auto;
+    line-height: 1.4;
+  }
+
+  p {
+    text-align: center;
+    max-width: 400px;
+    color: var(--slate-600);
+    margin: 0.1rem auto 10rem;
+    line-height: 1.7;
+  }
 }
 
 .number-01 {
@@ -245,16 +273,17 @@ body {
   font-weight: var(--font-weight-semibold);
   position: relative;
   margin: 10rem auto 0.5rem;
-}
-.number-01::before {
-  content: "";
-  width: 2px;
-  height: 60px;
-  background: var(--slate-300);
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    width: 2px;
+    height: 60px;
+    background: var(--slate-300);
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .image-main-grid {
@@ -266,15 +295,15 @@ body {
   margin: 0.1rem auto 0.5rem;
   max-width: 1280px;
   padding: 1rem;
-}
-.image-main-grid img {
-  border-radius: 8px;
-  max-width: 240px;
-  width: 100%;
-  display: block;
-}
-@media (max-width: 600px) {
-  .image-main-grid {
+
+  img {
+    border-radius: 8px;
+    max-width: 240px;
+    width: 100%;
+    display: block;
+  }
+
+  @include mobile {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -296,14 +325,15 @@ body {
   justify-content: center;
   padding: 2rem;
   color: var(--white);
-}
-.footer::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: var(--cyan-600);
-  opacity: 0.75;
-  z-index: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--cyan-600);
+    opacity: 0.75;
+    z-index: 0;
+  }
 }
 
 .footer-content {
@@ -313,9 +343,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 1rem;
-}
-@media (max-width: 900px) {
-  .footer-content {
+
+  @include tablet {
     grid-template-columns: 1fr;
     text-align: center;
     justify-items: center;
@@ -329,9 +358,8 @@ body {
   text-align: left;
   max-width: 300px;
   margin: 0 auto;
-}
-@media (max-width: 900px) {
-  .footer-content-column {
+
+  @include tablet {
     text-align: center;
     align-items: center;
   }
@@ -353,16 +381,17 @@ body {
   align-items: center;
   font-weight: var(--font-weight-semibold);
   background-color: var(--white);
-}
-.number-02::before {
-  content: "";
-  width: 2px;
-  height: 60px;
-  background: var(--slate-300);
-  position: absolute;
-  top: -60px;
-  left: 50%;
-  transform: translateX(-50%);
+
+  &::before {
+    content: "";
+    width: 2px;
+    height: 60px;
+    background: var(--slate-300);
+    position: absolute;
+    top: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .footer-content h4 {
@@ -376,13 +405,16 @@ body {
   margin: 0;
 }
 
-@media (max-width: 900px) {
+@include tablet {
   .download2 {
     margin-top: 1.5rem;
   }
 }
-@media (max-width: 600px) {
+
+@include mobile {
   .download2 {
     margin-top: 2rem;
   }
-}/*# sourceMappingURL=style.css.map */
+}
+
+
