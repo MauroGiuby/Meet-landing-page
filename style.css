@@ -214,12 +214,16 @@ body {
   color: var(--cyan-600);
   text-align: center;
   margin: 0.1rem auto 0.1rem;
+  line-height: 1.4;
+  word-spacing: 0.3rem;
 }
 
 .main-grid h2 {
   text-align: center;
+  font-weight: var(--font-weight-bold);
   max-width: 400px;
   margin: 0.1rem auto 0.1rem;
+  line-height: 1.4;
 }
 
 .main-grid p {
@@ -227,6 +231,7 @@ body {
   max-width: 400px;
   color: var(--slate-600);
   margin: 0.1rem auto 10rem; /* centra il testo + spazio sotto al footer */
+  line-height: 1.7;
 }
 
 /* --- FOOTER WRAPPER --- */
@@ -366,7 +371,12 @@ body {
 
   .footer-content-column { 
     text-align: center; /* sovrascrive il left */ 
-    align-items: center; /* centra gli elementi */ }
+    align-items: center; /* centra gli elementi */ 
+  }
+
+  .download2 { 
+    margin-top: 1.5rem; /* spazio tra testo e bottone */ 
+  }
 }
 
 /* --- MOBILE --- */
@@ -394,6 +404,10 @@ body {
   .footer-content-column { 
     text-align: center; 
     align-items: center; 
+  }
+
+  .download2 { 
+    margin-top: 2rem; /* un po' più di respiro su mobile */ 
   }
 }
 
