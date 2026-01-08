@@ -396,16 +396,6 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .footer-content { 
-    text-align: center; 
-    justify-items: center; 
-  } 
-  
-  .footer-content-column { 
-    text-align: center; 
-    align-items: center; 
-  }
-
   .download2 { 
     margin-top: 2rem; /* un po' più di respiro su mobile */ 
   }
